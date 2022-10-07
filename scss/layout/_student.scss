@@ -28,7 +28,7 @@
             align-items: center;
             justify-content: center;
             padding-inline:10px ;
-            background: url(/images/EARIST.png);
+            background: url(../images/EARIST.png);
             background-size: cover;
             background-repeat: no-repeat;
             
@@ -37,8 +37,7 @@
                 width: min(100%, 400px);
 
                 &__header{
-                    display: flex;
-                    align-items: center;
+                    text-align: center;
                     gap: .5rem;
                     margin: 0 0 20px;
                     font-weight: 500;
@@ -84,30 +83,31 @@
                         select{
                             border: none;
                             background: #fff;
-                            padding: 10px;
-                            border: 2px solid #808080;
+                            padding: 12.5px 15px;
+                            border: 1px solid #808080;
                             transition: .3s ease;
 
                             &:focus{
-                                border: 2px solid #b60000;
+                                border: 1px solid #b60000;
                             }
                         }
                     }
 
                     &__field-input{
                         position: relative;
-                        margin: 20px 0 0;
                         
+                        &.js-username{
+                            margin: 20px 0 10px;
+                        }
 
                         input{
                             width: 100%;
                             background: #fff;
                             padding: 20px 15px 5px;
-                            border: 2px solid #808080;
+                            border: 1px solid #808080;
                             transition: .3s ease;
-
                             &:focus{
-                                border: 2px solid #b60000;
+                                border: 1px solid #b60000;
                             }
                         }
 
@@ -144,7 +144,7 @@
                             background: #b60000;
                             color: #fff;
                             font-weight: 500;
-                            padding: 10px;
+                            padding: 12.5px 15px;
                         }
                     }
 
