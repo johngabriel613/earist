@@ -17,6 +17,7 @@
                 align-items: center;
                 justify-content: center;
                 background: #b60000;
+                box-shadow: 10px 0px 0px #FFEA01;
                 min-height: 100vh;
             }
             
@@ -53,6 +54,7 @@
                     width: min(100%, 290px);
                     padding-left: 10px;
                     position: relative;
+                    margin-bottom: 20px;
 
                     &::before{
                         content: '';
