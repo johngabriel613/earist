@@ -53,7 +53,7 @@ body {
   align-items: center;
   justify-content: center;
   padding-inline: 10px;
-  background: url(images/EARIST.png);
+  background: url(./images/EARIST.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
