@@ -169,8 +169,10 @@
                 display: none;
             }
             &__form{
+                justify-content: flex-start;
                 &__header{
                     display: block;
+                    
                 }
             }
         }

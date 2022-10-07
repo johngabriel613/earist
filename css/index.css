@@ -164,6 +164,9 @@ body {
   .module__wrapper__seal {
     display: none;
   }
+  .module__wrapper__form {
+    justify-content: flex-start;
+  }
   .module__wrapper__form__header {
     display: block;
   }
