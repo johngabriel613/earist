@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EARIST</title>
+    <title>EARIST AIMS</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,52 +16,54 @@
         <div class="module__wrapper">
             <div class="module__wrapper__seal">
                 <div class="module__wrapper__seal__fixed">
-                    <img src="images/schoolLogo.png" alt="earist-logo">
+                    <img src="images/schoolLogo.png" alt="logo">
                 </div>
             </div>
             <div class="module__wrapper__form">
                 <div class="module__wrapper__form__header">
-                    <img src="images/schoolLogo.png" alt="earist-logo">
-                    <p>Eulogio "Amang" Rodriguez Institute of Science and Technology</p>
+                    <div class="module__wrapper__form__header__border">
+                        <img src="images/schoolLogo.png" alt="logo">
+                    </div>
                 </div>
                 <div class="module__wrapper__form__content">
-                    
                     <div class="module__wrapper__form__content__title">
                         <h1><span>Student</span> Access Module</h1>
                     </div>
                     <form action="#" class="module__wrapper__form__content__login">
                         <div class="module__wrapper__form__content__login__field-select">
-                            <label for="module">Access module:</label>
+                            <label for="module">Access Module:</label>
                             <select name="module" id="module">
                                 <option value="student">Student</option>
                                 <option value="faculty">Faculty</option>
                                 <option value="applicant">Applicant</option>
                                 <option value="cashier">Cashier</option>
-                                <option value="registrar">Registrar</option>
                                 <option value="accounting">Accounting</option>
+                                <option value="registrar">Registrar</option>
                             </select>
                         </div>
                         <div class="separator"></div>
                         <div class="module__wrapper__form__content__login__field-input js-username">
                             <label for="username">Username</label>
-                            <input type="text" id="username">
+                            <input type="text" name="username" id="username">
                         </div>
                         <div class="module__wrapper__form__content__login__field-input js-password">
                             <label for="password">Password</label>
-                            <input type="password" id="password">
+                            <input type="password" name="password" id="password">
                         </div>
                         <div class="module__wrapper__form__content__login__forgot-pass">
                             <a href="#">Forgot Password?</a>
                         </div>
-                        <div class="module__wrapper__form__content__login__field-button">
+                        <div class="module__wrapper__form__content__login__field-btn">
                             <button>Log in</button>
                         </div>
                         <div class="module__wrapper__form__content__login__terms">
                             <p class="terms">By using this service, you understood and agree to the EARIST Online Services <a href="#">Terms of Use</a> and <a href="#">Privacy Statement</a>.</p>
                         </div>
+                        <div class="module__wrapper__form__content__login__copyright">
+                            <p>Copyright 2022 &copy EARIST</p>
+                        </div>
                     </form>
                 </div>
-
             </div>
         </div>
     </section>

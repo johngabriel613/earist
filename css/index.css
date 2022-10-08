@@ -32,20 +32,27 @@ body {
 
 .module__wrapper {
   display: flex;
+  background: url(../images/EARIST.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 200px;
 }
 .module__wrapper__seal {
-  background: #b60000;
-  min-width: 500px;
+  min-width: 595px;
+  -webkit-clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
+          clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
+  background: #FFEA01;
 }
 .module__wrapper__seal__fixed {
+  min-width: 580px;
   position: fixed;
-  min-width: 500px;
+  background: #b60000;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #b60000;
-  box-shadow: 10px 0px 0px #FFEA01;
-  min-height: 100vh;
+  -webkit-clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
+          clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
 }
 .module__wrapper__form {
   width: 100%;
@@ -57,30 +64,36 @@ body {
 }
 .module__wrapper__form__header {
   text-align: center;
-  gap: 0.5rem;
-  margin: 0 0 50px;
-  font-weight: 500;
+  background: #FFEA01;
+  width: 850px;
   color: #fff;
-  width: 100%;
-  padding: 20px 10px;
-  background: #b60000;
-  box-shadow: 0px 10px 0px #FFEA01;
+  margin-bottom: 15px;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 15%, 100% 50%, 50% 100%, 50% 100%, 0% 50%, 0% 15%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 15%, 100% 50%, 50% 100%, 50% 100%, 0% 50%, 0% 15%);
   display: none;
 }
-.module__wrapper__form__header img {
+.module__wrapper__form__header__border {
+  background: #b60000;
+  width: 100%;
+  color: #fff;
+  margin-bottom: 15px;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 15%, 100% 50%, 50% 100%, 50% 100%, 0% 50%, 0% 15%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 15%, 100% 50%, 50% 100%, 50% 100%, 0% 50%, 0% 15%);
+  padding: 10px;
+}
+.module__wrapper__form__header__border img {
   width: 75px;
 }
 .module__wrapper__form__content {
-  width: min(100%, 400px);
+  width: min(100%, 450px);
   padding-inline: 10px;
 }
 .module__wrapper__form__content__title {
   font-size: 1.5rem;
-  line-height: 1.25;
-  width: min(100%, 290px);
-  padding-left: 10px;
+  width: min(100%, 300px);
+  line-height: 1.2;
   position: relative;
-  margin-bottom: 20px;
+  padding: 0 10px;
 }
 .module__wrapper__form__content__title::before {
   content: "";
@@ -102,9 +115,8 @@ body {
   font-size: 0.9rem;
 }
 .module__wrapper__form__content__login__field-select select {
-  border: none;
-  background: #e6e6e6;
   padding: 12.5px 15px;
+  background: #fff;
   border: 2px solid #fff;
   transition: 0.3s ease;
 }
@@ -117,9 +129,16 @@ body {
 .module__wrapper__form__content__login__field-input.js-username {
   margin: 20px 0 10px;
 }
+.module__wrapper__form__content__login__field-input label {
+  position: absolute;
+  color: #808080;
+  top: 12.5px;
+  left: 15px;
+  transition: 0.3s ease;
+}
 .module__wrapper__form__content__login__field-input input {
+  background: #fff;
   width: 100%;
-  background: #e6e6e6;
   padding: 20px 15px 5px;
   border: 2px solid #fff;
   transition: 0.3s ease;
@@ -127,40 +146,30 @@ body {
 .module__wrapper__form__content__login__field-input input:focus {
   border: 2px solid #b60000;
 }
-.module__wrapper__form__content__login__field-input label {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  color: #808080;
-  transition: 0.3s ease-in-out;
-  pointer-events: none;
-}
-.module__wrapper__form__content__login__field-input svg {
-  position: absolute;
-  top: 15px;
-  left: 10px;
-  font-size: 1.2rem;
-}
 .module__wrapper__form__content__login__field-input.active label {
   font-size: 0.85rem;
   top: 3px;
-  font-weight: 500;
-}
-.module__wrapper__form__content__login__field-button {
-  width: 100%;
-  margin: 10px 0;
-}
-.module__wrapper__form__content__login__field-button button {
-  width: 100%;
-  background: #b60000;
-  color: #fff;
-  font-weight: 500;
-  padding: 12.5px 15px;
 }
 .module__wrapper__form__content__login__forgot-pass {
   text-align: right;
 }
-@media only screen and (max-width: 840px) {
+.module__wrapper__form__content__login__field-btn {
+  margin: 15px 0;
+}
+.module__wrapper__form__content__login__field-btn button {
+  width: 100%;
+  background: #b60000;
+  color: #fff;
+  padding: 12.5px;
+}
+.module__wrapper__form__content__login__copyright {
+  text-align: center;
+  margin-top: 20px;
+}
+@media screen and (max-width: 850px) {
+  .module__wrapper {
+    background-position: center;
+  }
   .module__wrapper__seal {
     display: none;
   }
