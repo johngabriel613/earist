@@ -1,3 +1,5 @@
+@use '../util' as u;
+
 *, *::before, *::after{
     padding: 0;
     margin: 0;
@@ -12,7 +14,7 @@ input, button, select, option{
 }
 
 a{
-    color: #b60000;
+    color: u.$primary-color;
     text-decoration: none;
 }
 
@@ -22,4 +24,8 @@ p, a{
 
 .separator{
     border-top: 1px solid #808080;
+}
+
+span{
+    color: u.$primary-color ;
 }

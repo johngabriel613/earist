@@ -20,7 +20,7 @@ passInput.addEventListener('blur', () => {
 
 function focusState(element){
         parentEl = element.parentElement
-            parentEl.classList.add('active')  
+            parentEl.classList.add('active')             
 
         
 }

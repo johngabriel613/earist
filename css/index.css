@@ -24,6 +24,10 @@ p, a {
   border-top: 1px solid #808080;
 }
 
+span {
+  color: #b60000;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   font-weight: normal;
@@ -32,22 +36,30 @@ body {
 
 .module__wrapper {
   display: flex;
-  background: url(../images/EARIST.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 200px;
 }
 .module__wrapper__seal {
-  min-width: 595px;
+  background: #FFEA01;
+  min-width: 610px;
+  height: 100vh;
+  position: relative;
   -webkit-clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
           clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
-  background: #FFEA01;
+}
+.module__wrapper__seal::before {
+  content: "";
+  position: absolute;
+  background: #fff;
+  width: 595px;
+  height: 100%;
+  -webkit-clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
+          clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
 }
 .module__wrapper__seal__fixed {
-  min-width: 580px;
   position: fixed;
-  background: #b60000;
-  min-height: 100vh;
+  width: 580px;
+  height: 100%;
+  background: url(../images/EARIST.png) center no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,56 +67,61 @@ body {
           clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
 }
 .module__wrapper__form {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  align-items: center;
+  width: 100%;
 }
 .module__wrapper__form__header {
-  text-align: center;
+  position: relative;
+  height: 110px;
+  width: 100%;
   background: #FFEA01;
-  width: 850px;
-  color: #fff;
-  margin-bottom: 15px;
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 15%, 100% 50%, 50% 100%, 50% 100%, 0% 50%, 0% 15%);
-          clip-path: polygon(0% 0%, 100% 0%, 100% 15%, 100% 50%, 50% 100%, 50% 100%, 0% 50%, 0% 15%);
+  -webkit-clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
+          clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
   display: none;
 }
-.module__wrapper__form__header__border {
-  background: #b60000;
+.module__wrapper__form__header::before {
+  content: "";
+  position: absolute;
+  height: 100px;
   width: 100%;
-  color: #fff;
-  margin-bottom: 15px;
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 15%, 100% 50%, 50% 100%, 50% 100%, 0% 50%, 0% 15%);
-          clip-path: polygon(0% 0%, 100% 0%, 100% 15%, 100% 50%, 50% 100%, 50% 100%, 0% 50%, 0% 15%);
-  padding: 10px;
+  background: #fff;
+  -webkit-clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
+          clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
+}
+.module__wrapper__form__header__border {
+  text-align: center;
+  height: 90px;
+  width: 100%;
+  background: url(../images/EARIST2.png) center no-repeat;
+  background-size: cover;
+  -webkit-clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
+          clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
+  padding: 5px 0;
 }
 .module__wrapper__form__header__border img {
   width: 75px;
 }
 .module__wrapper__form__content {
   width: min(100%, 450px);
-  padding-inline: 10px;
+  padding-inline: 15px;
 }
 .module__wrapper__form__content__title {
   font-size: 1.5rem;
-  width: min(100%, 300px);
-  line-height: 1.2;
+  width: min(100%, 290px);
+  padding-left: 10px;
   position: relative;
-  padding: 0 10px;
+  line-height: 1.1;
 }
 .module__wrapper__form__content__title::before {
   content: "";
   position: absolute;
-  height: 100%;
   width: 5px;
+  height: 100%;
   background: #FFEA01;
   left: 0;
-}
-.module__wrapper__form__content__title span {
-  color: #b60000;
 }
 .module__wrapper__form__content__login__field-select {
   display: flex;
@@ -112,12 +129,12 @@ body {
   margin: 10px 0 20px;
 }
 .module__wrapper__form__content__login__field-select label {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 .module__wrapper__form__content__login__field-select select {
   padding: 12.5px 15px;
-  background: #fff;
-  border: 2px solid #fff;
+  background: #f2f3f4;
+  border: 2px solid #f2f3f4;
   transition: 0.3s ease;
 }
 .module__wrapper__form__content__login__field-select select:focus {
@@ -126,55 +143,67 @@ body {
 .module__wrapper__form__content__login__field-input {
   position: relative;
 }
+.module__wrapper__form__content__login__field-input.active label {
+  font-size: 0.8rem;
+  top: 5px;
+}
 .module__wrapper__form__content__login__field-input.js-username {
   margin: 20px 0 10px;
 }
-.module__wrapper__form__content__login__field-input label {
-  position: absolute;
-  color: #808080;
-  top: 12.5px;
-  left: 15px;
-  transition: 0.3s ease;
-}
 .module__wrapper__form__content__login__field-input input {
-  background: #fff;
+  background: #f2f3f4;
   width: 100%;
   padding: 20px 15px 5px;
-  border: 2px solid #fff;
+  border: 2px solid #f2f3f4;
   transition: 0.3s ease;
 }
 .module__wrapper__form__content__login__field-input input:focus {
   border: 2px solid #b60000;
 }
-.module__wrapper__form__content__login__field-input.active label {
-  font-size: 0.85rem;
-  top: 3px;
+.module__wrapper__form__content__login__field-input input:focus ~ label {
+  color: #b60000;
+}
+.module__wrapper__form__content__login__field-input label {
+  position: absolute;
+  left: 15px;
+  top: 13px;
+  color: #808080;
+  transition: 0.3s ease;
 }
 .module__wrapper__form__content__login__forgot-pass {
   text-align: right;
 }
-.module__wrapper__form__content__login__field-btn {
-  margin: 15px 0;
-}
 .module__wrapper__form__content__login__field-btn button {
   width: 100%;
   background: #b60000;
+  padding: 12.5px 15px;
   color: #fff;
-  padding: 12.5px;
+  font-weight: 500;
+  margin: 10px 0 20px;
+  cursor: pointer;
 }
 .module__wrapper__form__content__login__copyright {
   text-align: center;
   margin-top: 20px;
 }
-@media screen and (max-width: 850px) {
-  .module__wrapper {
-    background-position: center;
+@media screen and (max-width: 1024px) {
+  .module__wrapper__seal {
+    min-width: 510px;
   }
+  .module__wrapper__seal::before {
+    width: 495px;
+  }
+  .module__wrapper__seal__fixed {
+    width: 480px;
+  }
+}
+@media screen and (max-width: 920px) {
   .module__wrapper__seal {
     display: none;
   }
   .module__wrapper__form {
     justify-content: flex-start;
+    gap: 2rem;
   }
   .module__wrapper__form__header {
     display: block;
